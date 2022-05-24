@@ -11,36 +11,11 @@ type Props = {
 };
 
 function AuthLogo({ providerName, size = 16 }: Props) {
-  switch (providerName) {
-    case "slack":
-      return (
-        <Logo>
-          <SlackLogo size={size} />
-        </Logo>
-      );
+  return (<Logo>
+    <KoalaLogo size={size} />
+  </Logo>
+  );
 
-    case "google":
-      return (
-        <Logo>
-          <GoogleLogo size={size} />
-        </Logo>
-      );
-
-    case "azure":
-      return (
-        <Logo>
-          <MicrosoftLogo size={size} />
-        </Logo>
-      );
-    case "oauth2":
-      return (
-        <Logo>
-          <KoalaLogo size={size} />
-        </Logo>
-      );
-    default:
-      return null;
-  }
 }
 
 const Logo = styled.div`
